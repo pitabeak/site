@@ -1,0 +1,63 @@
+@media (hover: hover) {
+	span[onclick]:hover {
+		cursor: pointer;
+	}
+}
+
+html {
+	background: #eee;
+}
+
+body {
+	max-width: 640px;
+	margin: 0 auto;
+	background: white;
+	color: black;
+	font-family: "Segoe UI",sans-serif;
+	font-size: 120%;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	padding: .5em;
+}
+
+.list>*::before {
+	content: " ";
+}
+
+.list>*::after {
+	content: ".";
+}
+
+.list:empty {
+	display: none;
+}
+
+#exits::before {
+	content: "Some exits are:";
+}
+
+#equip::before {
+	content: "Equipped:";
+}
+
+#objects::before {
+	content: "Objects here:";
+}
+
+#inven::before {
+	content: "My inventory:";
+}
+
+#message {
+	font-weight: bold;
+}
+
+#message:empty::before {
+	content: ". . .";
+}
+
+span[onclick] {
+	color: blue;
+	text-decoration: underline dotted;
+}
